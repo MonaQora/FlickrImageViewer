@@ -242,14 +242,16 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="05a-jQ-JKT">
                                 <rect key="frame" x="16" y="0.0" width="343" height="647"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flickr1" translatesAutoresizingMaskIntoConstraints="NO" id="Ve5-7J-0me">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="485"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ve5-7J-0me">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="647"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Ve5-7J-0me" secondAttribute="bottom" id="5av-7u-JHt"/>
+                                    <constraint firstItem="Ve5-7J-0me" firstAttribute="height" secondItem="05a-jQ-JKT" secondAttribute="height" id="I6l-CY-aeZ"/>
                                     <constraint firstItem="Ve5-7J-0me" firstAttribute="leading" secondItem="05a-jQ-JKT" secondAttribute="leading" id="Os8-Vg-ffY"/>
                                     <constraint firstItem="Ve5-7J-0me" firstAttribute="top" secondItem="05a-jQ-JKT" secondAttribute="top" id="mNw-l3-LLk"/>
+                                    <constraint firstItem="Ve5-7J-0me" firstAttribute="width" secondItem="05a-jQ-JKT" secondAttribute="width" id="uGe-ff-3dQ"/>
                                     <constraint firstAttribute="trailing" secondItem="Ve5-7J-0me" secondAttribute="trailing" id="v4f-Hg-r0Q"/>
                                 </constraints>
                                 <connections>
@@ -269,10 +271,6 @@
                     <navigationItem key="navigationItem" id="NId-lv-JzJ"/>
                     <connections>
                         <outlet property="imageView" destination="Ve5-7J-0me" id="iCm-X3-KJI"/>
-                        <outlet property="imageViewBottomConstraint" destination="5av-7u-JHt" id="ktj-vl-iZ0"/>
-                        <outlet property="imageViewLeadingConstraint" destination="Os8-Vg-ffY" id="sNl-1f-3Uc"/>
-                        <outlet property="imageViewTopConstraint" destination="mNw-l3-LLk" id="l2F-LJ-BdN"/>
-                        <outlet property="imageViewTrailingConstraint" destination="v4f-Hg-r0Q" id="Hej-WZ-fgw"/>
                         <outlet property="scrollView" destination="05a-jQ-JKT" id="6UE-WY-xig"/>
                     </connections>
                 </viewController>
@@ -299,7 +297,4 @@
             <point key="canvasLocation" x="672" y="1495"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="flickr1" width="1024" height="485"/>
-    </resources>
 </document>
