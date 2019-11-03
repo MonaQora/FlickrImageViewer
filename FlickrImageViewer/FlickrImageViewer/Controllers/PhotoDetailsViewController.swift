@@ -35,9 +35,9 @@ class PhotoDetailsViewController:UIViewController, UIGestureRecognizerDelegate {
     override open func prepare(for segue: UIStoryboardSegue,
                                sender: Any?) {
         if let id = segue.identifier,
-            let zoomedPhotoViewController = segue.destination as? ZoomingPhotoViewController,
+            let zoomingPhotoViewController = segue.destination as? ZoomingPhotoViewController,
             id == segueIdentifier {
-            zoomedPhotoViewController.imageURL = imageURL
+            zoomingPhotoViewController.imageURL = imageURL
         }
     }
 }
