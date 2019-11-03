@@ -40,7 +40,9 @@ class SearchFlickrPhotosViewController: UIViewController, UISearchBarDelegate, U
             
             searchFlickrViewModel.getListOfPhotots(searchKey: searchBar.text!, completionHandler: { errorMessage in
                 if let errorMsg = errorMessage {
-                    
+                    let alert = UIAlertController(title: "Message", message: errorMsg, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                 }
                 else {
                     self.collectionView?.reloadData()
