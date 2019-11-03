@@ -8,7 +8,7 @@
 
 import Foundation
 
-class searchFlickrPhotosViewModel {
+class SearchFlickrPhotosViewModel {
     var searchResults: [FlickrPhotoItem]?
     
     func getListOfPhotots(searchKey: String , completionHandler: @escaping (String?) -> Void)  {
@@ -18,8 +18,10 @@ class searchFlickrPhotosViewModel {
                     self.searchResults = result.photos?.photo
                     if self.searchResults?.count != 0 {
                         for item in self.searchResults! {
-                            let photoURL = URL.flickrPhotoURL(photoItem: item)
-                            item.photoUrl = photoURL
+                            let photoSmallURL = URL.flickrPhotoURL(photoItem: item)
+                            item.photoSmallUrl = photoSmallURL
+                            let photoLargeURL = URL.flickrPhotoURL(photoItem: item, photoSizeNeeded: .large)
+                            item.photoLargeUrl = photoLargeURL
                         }
                         completionHandler(nil)
                     }

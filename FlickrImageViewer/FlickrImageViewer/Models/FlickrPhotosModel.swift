@@ -47,8 +47,9 @@ class FlickrPhotoItem: NSObject, Mappable {
   var server :String!
   var farm :Int!
   var title :String?
-  var photoUrl: URL?
-  
+  var photoSmallUrl: URL?
+  var photoLargeUrl: URL?
+
   init (photoID: String, farm: Int, server: String, secret: String) {
     self.photoID = photoID
     self.farm = farm

@@ -13,15 +13,20 @@ class SearchFlickrPhotosViewController: UIViewController, UISearchBarDelegate, U
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
-    
-    private var searchFlickrViewModel = searchFlickrPhotosViewModel()
+    @IBOutlet weak var chooseListTypeButton: UIButton!
+
+    private var searchFlickrViewModel = SearchFlickrPhotosViewModel()
     private let reuseIdentifier = "FlickrCell"
-    private let itemsPerRow: CGFloat = 3
+    private var itemsPerRow: CGFloat = 3
 
     override func viewDidLoad() {
       super.viewDidLoad()
         searchBar.delegate = self
         collectionView.delegate = self
+        chooseListTypeButton.addTarget(self, action: #selector(chooseListType), for: .touchUpInside)
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        self.title = "Flicker Search"
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -45,6 +50,19 @@ class SearchFlickrPhotosViewController: UIViewController, UISearchBarDelegate, U
             })
         }
     }
+    
+    
+    @objc func chooseListType(sender: UIButton!) {
+        if itemsPerRow == 3 {
+            chooseListTypeButton.setTitle("Grid", for: .normal)
+            itemsPerRow = 1
+        }
+        else {
+            chooseListTypeButton.setTitle("List", for: .normal)
+            itemsPerRow = 3
+        }
+        self.collectionView.reloadData()
+    }
 }
 
 extension SearchFlickrPhotosViewController: UICollectionViewDataSource {
@@ -64,13 +82,16 @@ extension SearchFlickrPhotosViewController: UICollectionViewDataSource {
     cell.backgroundColor = .white
     let flickrPhoto = searchFlickrViewModel.searchResults![indexPath.row]
     cell.imageView.kf.indicatorType = .activity
-    cell.imageView.kf.setImage(with: flickrPhoto.photoUrl)
+    cell.imageView.kf.setImage(with: flickrPhoto.photoSmallUrl)
     
     return cell
   }
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let viewController = storyboard.instantiateViewController(withIdentifier: "PhotoDetailsViewController") as! PhotoDetailsViewController
+    viewController.photoItem = searchFlickrViewModel.searchResults![indexPath.row]
+    self.navigationController?.pushViewController(viewController, animated: true)
   }
 }
 
