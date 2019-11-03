@@ -7,33 +7,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E7806339-8F51-457A-A329-0EB8ADFCF4D7"
-            shouldBeEnabled = "Yes"
+            uuid = "300DEFB7-D4DF-47FE-8A06-FD2048E2E4FF"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FlickrImageViewer/ViewModels/ZoomingPhotoViewModel.swift"
+            filePath = "FlickrImageViewer/Services/FlickrPhotosService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "xOffset(frame:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "59E8C256-83A1-42C0-8DA8-5CB9CB97A569"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FlickrImageViewer/ViewModels/ZoomingPhotoViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "yOffset(frame:)"
-            landmarkType = "7">
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "fetchFlickrSerachResults(searchKey:taskCallback:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "300DEFB7-D4DF-47FE-8A06-FD2048E2E4FF - 8fba96739918955b"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;FlickrImageViewer.FlickrPhotosModel, Alamofire.AFError&gt;) -&gt; () in FlickrImageViewer.fetchFlickrSerachResults(searchKey: Swift.String, taskCallback: (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;, Swift.Optional&lt;FlickrImageViewer.FlickrPhotosModel&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "FlickrImageViewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a12345/Desktop/Projects/MQ/Mona%20Qora/FlickrImageViewer/FlickrImageViewer/FlickrImageViewer/Services/FlickrPhotosService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "515">
+               </Location>
+               <Location
+                  uuid = "300DEFB7-D4DF-47FE-8A06-FD2048E2E4FF - d9d5f792ddec62d9"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;FlickrImageViewerTests.FlickrPhotosModel, Alamofire.AFError&gt;) -&gt; () in FlickrImageViewerTests.fetchFlickrSerachResults(searchKey: Swift.String, taskCallback: (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;, Swift.Optional&lt;FlickrImageViewerTests.FlickrPhotosModel&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "FlickrImageViewerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a12345/Desktop/Projects/MQ/Mona%20Qora/FlickrImageViewer/FlickrImageViewer/FlickrImageViewer/Services/FlickrPhotosService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "515">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
