@@ -15,7 +15,7 @@ let noDataMessage = "NO Data Returned, try another search key."
 func fetchFlickrSerachResults(searchKey:String, taskCallback: @escaping (Bool, Error?, FlickrPhotosModel?) -> ())
 {
     if let searchKey = searchKey.addingPercentEncoding(withAllowedCharacters: CharacterSet.alphanumerics) {
-        let requestURL = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(apiKey)&text=\(searchKey)&per_page=24&format=json&nojsoncallback=1"
+        let requestURL = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(apiKey)&text=\(searchKey)&per_page=100&format=json&nojsoncallback=1"
         
         AF.request(requestURL).validate().responseObject { (response: AFDataResponse<FlickrPhotosModel>) in
             switch(response.result) {
